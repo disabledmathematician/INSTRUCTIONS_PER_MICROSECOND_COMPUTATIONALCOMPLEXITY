@@ -77,9 +77,9 @@ print("Merge Sort, a log2 algorithm takes {} microseconds for a list of size ten
 
 print("Insertion sort, an quadratic algorithm takes {} microseconds for a list of size ten and {} microseconds for a list of size thirty and {} microseconds for a list of size one hundred".format(ins_time_ten * 10 ** 5, ins_time_thirty * 10 ** 5, ins_time_hundred * 10 ** 5))
 import numpy as np
-print("Merge Sort, Ratios (instructions per microsecond): a list of size ten {};  a list of size thirty {}; a list of size one hundred {}".format(((merge_time_ten * 10 ** 5) / (15 + 23)), ((merge_time_thirty * 10 ** 5) / (15 + 23)), ((merge_time_hundred * 10 ** 5) / (15 + 23))))
+print("Merge Sort, Ratios (instructions per microsecond): a list of size ten {};  a list of size thirty {}; a list of size one hundred {}".format(((15 + 23) / (merge_time_ten * 10 ** 5)), ((15 + 23) /(merge_time_thirty * 10 ** 5)), ((15 + 23) / (merge_time_hundred * 10 ** 5))))
 
-print("Insertion sort, Ratios (instructions per microsecond): a list of size ten {}; a list of size thirty {}; a list of size one hundred {}".format((ins_time_ten * 10 ** 5) / 15,  (ins_time_thirty * 10 ** 5) / 15, (ins_time_hundred * 10 ** 5) / 15))
+print("Insertion sort, Ratios (instructions per microsecond): a list of size ten {}; a list of size thirty {}; a list of size one hundred {}".format((ins_time_ten * 10 ** 5), 15 / (ins_time_thirty * 10 ** 5), 15 / (ins_time_hundred * 10 ** 5)))
 
 """
 L: [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
@@ -93,13 +93,12 @@ Unsorted List Three [100, 99, 98, 97, 96, 95, 94, 93, 92, 91, 90, 89, 88, 87, 86
 L sorted: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 L2 sorted: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30]
 L3 sorted: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100]
-Merge Sort, a log2 algorithm takes 4.104100003132771 microseconds for a list of size ten and 7.036399995286047 for a list of size thirty and 20.38019999872631 for a list of size 100
-Insertion sort, an quadratic algorithm takes 2.250000000003638 microseconds for a list of size ten and 4.072899992024759 microseconds for a list of size thirty and 33.29170000370141 microseconds for a list of size one hundred
-Merge Sort, Ratios (instructions per microsecond): a list of size ten 0.10800263166138872;  a list of size thirty 0.18516842092858019; a list of size one hundred 0.5363210525980608
-Insertion sort, Ratios (instructions per microsecond): a list of size ten 0.15000000000024252; a list of size thirty 0.27152666613498394; a list of size one hundred 2.219446666913427
+Merge Sort, a log2 algorithm takes 10.302100008630077 microseconds for a list of size ten and 6.999999982326699 for a list of size thirty and 20.374999985506292 for a list of size 100
+Insertion sort, an quadratic algorithm takes 2.119800001310068 microseconds for a list of size ten and 3.9792000052329968 microseconds for a list of size thirty and 31.729200009067426 microseconds for a list of size one hundred
+Merge Sort, Ratios (instructions per microsecond): a list of size ten 3.6885683470522874;  a list of size thirty 5.428571442277254; a list of size one hundred 1.8650306761733109
+Insertion sort, Ratios (instructions per microsecond): a list of size ten 2.119800001310068; a list of size thirty 3.769601925078831; a list of size one hundred 0.47275065226079976
 
-[Program finished] 
-
+[Program finished]
 Dimensional Analysis of Computational Complexity (Algorithmic Complexity)
 
 Charles Thomas Wallace Truscott Watters, MITx """
